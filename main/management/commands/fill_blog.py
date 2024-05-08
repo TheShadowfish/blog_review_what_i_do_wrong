@@ -34,9 +34,21 @@ class Command(BaseCommand):
 
         for item in articles:
             print(item)
-            input('\\\see...')
-            Article.objects.create(**item)
+            # input('\\\see...')
+            # category=Category.objects.get(id=item['category']),
+            Article.objects.create(
+                category=Category.objects.get(id=1),
+                title=item['title'],
+                body=item['body']
+
+                )
             #     category=
             #     title=item,
             #     body='Lorem ipsum' + str(item)
             # )
+            # for item in articles:
+            #     Article.objects.create(
+            #         category=Category.objects.get(id=1),
+            #         title=item['title'],
+            #         body=item['body']
+            #     )
