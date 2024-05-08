@@ -6,7 +6,7 @@ from main.models import Category
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    fields = ('title',)
+    fields = ('title','body','lie')
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
