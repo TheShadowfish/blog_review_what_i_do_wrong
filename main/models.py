@@ -16,6 +16,7 @@ class Article(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     title = models.CharField(max_length=250, verbose_name='Заголовок')
     body = models.TextField(verbose_name='Содержимое')
+    lie = models.BooleanField(default=True, verbose_name='правда')
     preview = models.ImageField(upload_to='blog/', null=True, blank=True, verbose_name='Изображение')
 
     def __str__(self):

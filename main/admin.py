@@ -6,8 +6,8 @@ from main.models import Category
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    fields = ('pk', 'title',)
+    fields = ('title',)
 
 @admin.register(Category)
-class ArticleAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     fields = ('title',)

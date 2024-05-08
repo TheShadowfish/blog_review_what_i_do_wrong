@@ -37,9 +37,9 @@ class Command(BaseCommand):
             # input('\\\see...')
             # category=Category.objects.get(id=item['category']),
             Article.objects.create(
-                category=Category.objects.get(id=1),
                 title=item['title'],
-                body=item['body']
+                body=item['body'],
+                category=Category.objects.get(id=item['category'])
 
                 )
             #     category=
